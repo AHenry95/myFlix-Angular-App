@@ -1,0 +1,50 @@
+<div class="profile-container">
+    <!-- User Profile Section -->
+    <mat-card class="profile-info-card">
+        <mat-card-header>
+            <mat-card-title>My profile</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="user-details">
+                <div class="detail-row">
+                    <strong>Name: </strong>
+                    <span>{{user.Name}}</span>
+                </div>
+                <div class="detail-row">
+                    <strong>Username: </strong>
+                    <span>{{user.Username}}</span>
+                </div>
+                <div class="detail-row">
+                    <strong>Email: </strong>
+                    <span>{{user.Email}}</span>
+                </div>
+                <div class="detail-row" *ngIf="user.Birthdate">
+                    <strong>Birthdate: </strong>
+                    <span>{{user.Birthdate | date}}</span>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="openEditDialog()">Edit Profile</button>
+            <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <!-- Favorites Section -->
+    <div class="favorites-section">
+        <h2> My Favorite Movies</h2>
+
+        <div class="no-favorites" *ngIf="favoriteMovies.length === 0">
+            <p>You haven't added any favorite movies yet!</p>
+            <button mat-raised-button color="primary" routerLink="/movies">
+                Browse Movies
+            </button>
+        </div>
+
+        <app-movie-card
+            *ngIf="favoriteMovies.length > 0"
+            [moviesToDisplay]="favoriteMovies"
+        >
+        </app-movie-card>
+    </div>
+</div>

@@ -125,7 +125,7 @@ export class FetchApiDataService {
    */
   public addMovieToFavorites(userID: string, movieID: string): Observable<any> {
     return this.http
-      .post(apiUrl + `users/${userID}/movies/${movieID}`, { headers: this.getAuthHeaders() })
+      .post(apiUrl + `users/${userID}/movies/${movieID}`, {}, { headers: this.getAuthHeaders() })
       .pipe(
         map(this.extractResponseData),
         catchError(this.handleError)

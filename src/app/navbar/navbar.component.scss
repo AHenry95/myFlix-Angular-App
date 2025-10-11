@@ -1,0 +1,44 @@
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1);
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8
+    }
+}
+
+.spacer { 
+    flex: 1 1 auto;
+}
+
+button {
+    margin-left: 8px;
+
+    mat-icon {
+        margin-right: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-title {
+        font-size: 18px;
+    }
+
+    button { 
+        margin-left: 4px;
+        font-size: 12px;
+
+        mat-iron {
+            margin-right: 2px;
+            font-size: 18px;
+        }
+    }
+}

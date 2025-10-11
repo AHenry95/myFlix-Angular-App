@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" *ngIf="isLoggedIn()">
+    <span class="app-title" routerLink="/movies">myFlix</span>
+    
+    <span class="spacer"></span>
+
+    <button mat-button routerLink="/movies">
+        <mat-icon>movie</mat-icon>
+        Movies
+    </button>
+
+    <button mat-button routerLink="/profile">
+        <mat-icon>person</mat-icon>
+        Profile
+    </button>
+
+    <button mat-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+    </button>
+</mat-toolbar>

@@ -1,0 +1,97 @@
+.profile-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-info-card {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); 
+
+    strong {
+        color: rgba(0, 0, 0, 0.6);
+        min-width: 120px;
+    }
+
+    span {
+        color: rgba (0, 0, 0, 0.87);
+        flex: 1;
+        text-align: right;
+    }
+}
+
+mat-card-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    justify-content: center;
+
+    button {
+        flex: 1;
+        max-width: 200px;
+    }
+}
+
+.favorites-section {
+    margin-top: 40px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 28px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+}
+
+.no-favorites {
+    text-align: center;
+    padding: 40px;
+
+    p {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+    }
+}
+
+.favorites-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.favorite-card {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.favorite-card mat-card-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

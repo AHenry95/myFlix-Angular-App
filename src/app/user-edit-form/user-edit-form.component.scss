@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+mat-form-field {
+    width: 100%;
+
+    &.password-field {
+        margin-bottom: 7px;
+    }
+}
+
+mat-card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.cancel-button {
+   background-color: #f44336; 
+   color: #FFF;
+   transition: all 0.3s ease;
+
+   &:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+   }
+}
