@@ -1,7 +1,7 @@
 .profile-container {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .profile-info-card {
@@ -46,6 +46,17 @@ mat-card-actions {
     }
 }
 
+.logout-button {
+   background-color: #f44336; 
+   color: #FFF;
+   transition: all 0.3s ease;
+
+   &:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+   }
+}
+
 .favorites-section {
     margin-top: 40px;
 
@@ -54,6 +65,13 @@ mat-card-actions {
         margin-bottom: 24px;
         font-size: 28px;
         color: rgba(0, 0, 0, 0.87);
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    ::ng-deep app-movie-card .movies-container {
+        background: none !important;
+        padding: 20px;
     }
 }
 
