@@ -4,6 +4,13 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
+/**
+ * The UserLoginForm component provides a disalog where users can enter their username and password to access the application.
+ * When user's enter accurate login information the user object returned from the API request will be saved to localStorage.
+ * The token included in the API response is saved to local Storage seperately.
+ * 
+ * The user is routed to the movies view, which displayed the MovieCard component, once authenticated.  
+ */
 @Component({
   selector: 'app-user-login-form',
   standalone: false,

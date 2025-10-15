@@ -3,6 +3,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+/**
+ * The UserRegistrationForm component is accessed via the welcome page.
+ * This component is used to create a new user object in the database, 
+ * using the information entered by the user in the form. 
+ */
+
 @Component({
   selector: 'app-user-registration-form',
   standalone: false,

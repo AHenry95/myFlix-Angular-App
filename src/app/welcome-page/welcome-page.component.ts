@@ -4,6 +4,14 @@ import { UserRegistrationFormComponent } from '../user-registration-form/user-re
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
+/** 
+ * The WelcomePageComponent serves as the landing page for the myFlix application. 
+ * 
+ * This component displays a welcome message for users,
+ * and provides buttons gor them to either register for a new account or log into an exisiting account.
+ * Both buttons open their respeicitive dialog forms. 
+*/
+
 @Component({
   selector: 'app-welcome-page',
   standalone: false,
@@ -16,6 +24,10 @@ export class WelcomePageComponent implements OnInit {
     public router: Router
   ) {}
 
+  /** 
+   * When the component is mounted, user who have already logged in 
+   * and have a valid token in in localStorage will be redirected to the MoiveCard view.
+   */
   ngOnInit(): void {
     const token = localStorage.getItem('token');
 
@@ -23,7 +35,7 @@ export class WelcomePageComponent implements OnInit {
       this.router.navigate(['movies']);
     }
   }
-
+  
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       width: '280px'

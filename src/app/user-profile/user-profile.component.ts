@@ -6,6 +6,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { UserEditFormComponent } from '../user-edit-form/user-edit-form.component';
 
+/**
+ * The UserProfile Component displays the user's profile information (Name, Username, Email, and Birthdate (if added)).
+ * Additionally, UserProfile included two buttons:
+ * 1. Edit Profile - this opens the UserEditForm component, a dialog that allows the user to edit their account information
+ * 2. Logout - logs out the user, clears the localStorage, and returns the user to the WelcomePage
+ * 
+ * Lastly, the UserProfile Component displays the MovieCard Component, but only displays the movie's the user has added to their favorite's list. 
+ */
+
 @Component({
   selector: 'app-user-profile',
   standalone: false,
@@ -45,6 +54,9 @@ export class UserProfileComponent implements OnInit {
 
       this.loadUserProfile();
 
+      /** 
+       * Subscribes the the favorites service in order to keep the displayed favorite movies up to date with any changes made. 
+       * */
       this.favoritesService.favorites$.subscribe(favorites => {
         if (this.user.Favorites) {
           this.user.Favorites = favorites;

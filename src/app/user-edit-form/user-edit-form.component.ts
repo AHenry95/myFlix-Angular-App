@@ -3,6 +3,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+/**
+ * The UserEditForm component is a dialog that can be accessed via the UserProfile component.
+ * Once opened, the form is populated with user information passed from the UserProfile.
+ * The ngModel directive is used in the template to update the data saved in the component as the updatedData object.
+ * When the form is submitted by the user, the updatedData object is used as the body of the API request used to update the user information in the database.
+ * 
+ * Note that the password value is left blank in the userData object, and is only included in the updatedData object if the user changes their password.  
+ */
 @Component({
   selector: 'app-user-edit-form',
   standalone: false,

@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+/**
+ * This service is used to manage a user's favorite movies, 
+ * and to keep all components in sync with changes made to a user's favorites. 
+ */
 @Injectable({
   providedIn: 'root'
 })

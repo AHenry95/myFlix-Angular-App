@@ -7,6 +7,12 @@ import { SynopsisDialogComponent } from '../synopsis-dialog/synopsis-dialog.comp
 import { GenreDialogComponent } from '../genre-dialog/genre-dialog.component';
 import { DirectorDialogComponent } from '../director-dialog/director-dialog.component';
 
+/**
+ * The MovieCard component contains logic for displaying information about movie contained in the database. 
+ * The component includes logic for displaying all movies in the database,
+ * filtering to only show movies included in a user's favorites list, 
+ * and adding/removing movies from a user's favorites.
+ */
 @Component({
   selector: 'app-movie-card',
   standalone: false,
