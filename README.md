@@ -1,59 +1,90 @@
-# MyFlixAngularClient
+# myFlix - Angular Client App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.17.
+A client app created with Angular for the [movie_api](https://github.com/AHenry95/movie_api), that provides users with access to information about a number of movies, directors, and film genres. Users can create profiles, browse through the available movies, and add/remove movies from their favorites list, which is displayed on their profile page. 
 
-## Development server
+## Features
+- **Usere Authentication**: Secure user registration and login system using JWT authentication
+- **Movie Browsing**: Authenticated users can browse a display of cards showing each movie pulled from the database
+- **Movie Details**:Each movie card displays a number of details:
+  - The movie's title
+  - The movie's director
+  - A high-definition movie poster image
+  - Each card also displayed three buttons that open different dialogs:
+    - Director - Shows basic information about the movie's director (name, brief bio, year of birth)
+    - Genre - Shows basic information about the movie's genre (genre name, brief description)
+    - Synopsis - Displays a short synopsis of the movie   
+- **Easy Navigation**: A nav bar at the top of the page allows users to easily navigate between the movie view and user profile view, as well as providing an easy way to log out
+- **User Profile**: Users can view and edit their account details (Name, Username, Date of Birth, email address, and password (password is edit only, cannot be viewed). Users can also view the movie cards of movies added to their favorites list in this view.  
+- **Favorites Management**: Each movie card includes a button that allows users to toggle movies to/from their favorites list. 
+- **Real-Time Updates**: Changes to the user favorites are automatically updated and kept in-sync across the different views
 
-To start a local development server, run:
+## Tech Stack
 
-```bash
-ng serve
+- Angular 19.2.0
+- TypeScript 5.7.2
+- Angular Material 19.2.19
+- SCSS
+- RxJS 7.8.0
+- Amgular Router 19.2.0
+- Angular CLI 19.2.17
+
+## Installation
+1. **Clone the repository**
+```Bash 
+   git clone https://github.com/AHenry95/myFlix-Angular-App
+   cd myFlix-Angular-App
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. **Install dependencies**
 ```bash
-ng generate component component-name
+  npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Application Routes
+| Route | Component | Description |
+|-------|-----------|-------------|
+| `/welcome` | WelcomePageComponent | Landing page with login/signup options |
+| `/movies` | MovieCardComponent | Main movie browsing interface |
+| `/profile` | UserProfileComponent | User profile and favorites management |
+| `/` | Redirect | Redirects to `/welcome` |
 
-```bash
-ng generate --help
-```
+## Key Components
 
-## Building
+### WelcomePageComponent
+Landing the provides options for the exisiting users to login or new users to register. Accessible to unauthenticated users.
 
-To build the project run:
+### MovieCardComponent
+- Displays movie title, director, and poster image
+- Includes buttons for displaying dialogs that display the movie's synopsis, info on the genre, or info on the director.
+- Includes favorite/unfavorite toggle button.
 
-```bash
-ng build
-```
+### UserProfileComponent
+- Displays user porfile details (minus the user's password)
+- Displays button to open dialog that allows user to edit their profile details (including changing their password)
+- Displays button that allows user to logout
+- Displays movie cards for user's favorite movies
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Services
 
-## Running unit tests
+### FetchApiDataService
+Handles all HTTP requests to the myFlix API, including requests for:
+- User registration and authentication
+- Retreiving move data
+- Managing user profiles
+- Adding/removing favorite movies
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+**API Methods**:
+  - `userRegistration(userDetails)`
+  - `userLogin(userDetails)`
+  - `getAllMovies()`
+  - `getOneMovie(movieID)`
+  - `getUser(userID)`
+  - `getUserFavorites(userID)`
+  - `addMovieToFavorites(userID, movieID)`
+  - `removeMovieFromFavorites(userID, movieID)`
+  - `editUser(userID, updatedUserDetails)`
+  - `deleteUser(userID)`
 
-```bash
-ng test
-```
+### FavoritesService
+Manages user's favorites across components using RxJS BehaviorSubject. Ensures user favorites remain syncronized from component to component, whenever they are made. Implementation prevents situations such as changes made to a user's favorites in the UserProfileComponent not displaying in the main movies view without the user taking an action that would result in an API request that would update the displayed favorites. 
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
