@@ -1,0 +1,109 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>myFlix Angular Client Documentation - v0.0.0</title><meta name="description" content="Documentation for myFlix Angular Client Documentation"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">myFlix Angular Client Documentation - v0.0.0</a><div id="tsd-toolbar-links"><a href="https://github.com/AHenry95/myFlix-Angular-Client">GitHub</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>myFlix Angular Client Documentation - v0.0.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="myflix-angular-client-app" class="tsd-anchor-link">myFlix - Angular Client App<a href="#myflix-angular-client-app" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>A client app created with Angular for the <a href="https://github.com/AHenry95/movie_api">movie_api</a>, that provides users with access to information about a number of movies, directors, and film genres. Users can create profiles, browse through the available movies, and add/remove movies from their favorites list, which is displayed on their profile page.</p>
+<h2 id="features" class="tsd-anchor-link">Features<a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><strong>Usere Authentication</strong>: Secure user registration and login system using JWT authentication</li>
+<li><strong>Movie Browsing</strong>: Authenticated users can browse a display of cards showing each movie pulled from the database</li>
+<li><strong>Movie Details</strong>:Each movie card displays a number of details:
+<ul>
+<li>The movie's title</li>
+<li>The movie's director</li>
+<li>A high-definition movie poster image</li>
+<li>Each card also displayed three buttons that open different dialogs:
+<ul>
+<li>Director - Shows basic information about the movie's director (name, brief bio, year of birth)</li>
+<li>Genre - Shows basic information about the movie's genre (genre name, brief description)</li>
+<li>Synopsis - Displays a short synopsis of the movie</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Easy Navigation</strong>: A nav bar at the top of the page allows users to easily navigate between the movie view and user profile view, as well as providing an easy way to log out</li>
+<li><strong>User Profile</strong>: Users can view and edit their account details (Name, Username, Date of Birth, email address, and password (password is edit only, cannot be viewed). Users can also view the movie cards of movies added to their favorites list in this view.</li>
+<li><strong>Favorites Management</strong>: Each movie card includes a button that allows users to toggle movies to/from their favorites list.</li>
+<li><strong>Real-Time Updates</strong>: Changes to the user favorites are automatically updated and kept in-sync across the different views</li>
+</ul>
+<h2 id="tech-stack" class="tsd-anchor-link">Tech Stack<a href="#tech-stack" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li>Angular 19.2.0</li>
+<li>TypeScript 5.7.2</li>
+<li>Angular Material 19.2.19</li>
+<li>SCSS</li>
+<li>RxJS 7.8.0</li>
+<li>Amgular Router 19.2.0</li>
+<li>Angular CLI 19.2.17</li>
+</ul>
+<h2 id="installation" class="tsd-anchor-link">Installation<a href="#installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ol>
+<li><strong>Clone the repository</strong></li>
+</ol>
+<pre><code class="Bash"><span class="hl-0">   </span><span class="hl-1">git</span><span class="hl-0"> </span><span class="hl-2">clone</span><span class="hl-0"> </span><span class="hl-2">https://github.com/AHenry95/myFlix-Angular-App</span><br/><span class="hl-0">   </span><span class="hl-1">cd</span><span class="hl-0"> </span><span class="hl-2">myFlix-Angular-App</span>
+</code><button type="button">Copy</button></pre>
+
+<ol start="2">
+<li><strong>Install dependencies</strong></li>
+</ol>
+<pre><code class="bash"><span class="hl-0">  </span><span class="hl-1">npm</span><span class="hl-0"> </span><span class="hl-2">install</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="application-routes" class="tsd-anchor-link">Application Routes<a href="#application-routes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/welcome</code></td>
+<td>WelcomePageComponent</td>
+<td>Landing page with login/signup options</td>
+</tr>
+<tr>
+<td><code>/movies</code></td>
+<td>MovieCardComponent</td>
+<td>Main movie browsing interface</td>
+</tr>
+<tr>
+<td><code>/profile</code></td>
+<td>UserProfileComponent</td>
+<td>User profile and favorites management</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Redirect</td>
+<td>Redirects to <code>/welcome</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-components" class="tsd-anchor-link">Key Components<a href="#key-components" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="welcomepagecomponent" class="tsd-anchor-link">WelcomePageComponent<a href="#welcomepagecomponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Landing the provides options for the exisiting users to login or new users to register. Accessible to unauthenticated users.</p>
+<h3 id="moviecardcomponent" class="tsd-anchor-link">MovieCardComponent<a href="#moviecardcomponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Displays movie title, director, and poster image</li>
+<li>Includes buttons for displaying dialogs that display the movie's synopsis, info on the genre, or info on the director.</li>
+<li>Includes favorite/unfavorite toggle button.</li>
+</ul>
+<h3 id="userprofilecomponent" class="tsd-anchor-link">UserProfileComponent<a href="#userprofilecomponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>Displays user porfile details (minus the user's password)</li>
+<li>Displays button to open dialog that allows user to edit their profile details (including changing their password)</li>
+<li>Displays button that allows user to logout</li>
+<li>Displays movie cards for user's favorite movies</li>
+</ul>
+<h2 id="services" class="tsd-anchor-link">Services<a href="#services" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="fetchapidataservice" class="tsd-anchor-link">FetchApiDataService<a href="#fetchapidataservice" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Handles all HTTP requests to the myFlix API, including requests for:</p>
+<ul>
+<li>User registration and authentication</li>
+<li>Retreiving move data</li>
+<li>Managing user profiles</li>
+<li>Adding/removing favorite movies</li>
+</ul>
+<p><strong>API Methods</strong>:</p>
+<ul>
+<li><code>userRegistration(userDetails)</code></li>
+<li><code>userLogin(userDetails)</code></li>
+<li><code>getAllMovies()</code></li>
+<li><code>getOneMovie(movieID)</code></li>
+<li><code>getUser(userID)</code></li>
+<li><code>getUserFavorites(userID)</code></li>
+<li><code>addMovieToFavorites(userID, movieID)</code></li>
+<li><code>removeMovieFromFavorites(userID, movieID)</code></li>
+<li><code>editUser(userID, updatedUserDetails)</code></li>
+<li><code>deleteUser(userID)</code></li>
+</ul>
+<h3 id="favoritesservice" class="tsd-anchor-link">FavoritesService<a href="#favoritesservice" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Manages user's favorites across components using RxJS BehaviorSubject. Ensures user favorites remain syncronized from component to component, whenever they are made. Implementation prevents situations such as changes made to a user's favorites in the UserProfileComponent not displaying in the main movies view without the user taking an action that would result in an API request that would update the displayed favorites.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#myflix-angular-client-app"><span>my<wbr/>Flix -<wbr/> <wbr/>Angular <wbr/>Client <wbr/>App</span></a><ul><li><a href="#features"><span>Features</span></a></li><li><a href="#tech-stack"><span>Tech <wbr/>Stack</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><a href="#application-routes"><span>Application <wbr/>Routes</span></a></li><li><a href="#key-components"><span>Key <wbr/>Components</span></a></li><li><ul><li><a href="#welcomepagecomponent"><span>Welcome<wbr/>Page<wbr/>Component</span></a></li><li><a href="#moviecardcomponent"><span>Movie<wbr/>Card<wbr/>Component</span></a></li><li><a href="#userprofilecomponent"><span>User<wbr/>Profile<wbr/>Component</span></a></li></ul></li><li><a href="#services"><span>Services</span></a></li><li><ul><li><a href="#fetchapidataservice"><span>Fetch<wbr/>Api<wbr/>Data<wbr/>Service</span></a></li><li><a href="#favoritesservice"><span>Favorites<wbr/>Service</span></a></li></ul></li></ul></div></details></div><div class="site-menu"><nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://myflix-ah-72292705dfa8.herokuapp.com/">API Documentation</a><a href="https://github.com/AHenry95/myFlix-Angular-Client" class="tsd-nav-link">GitHub</a></nav><nav class="tsd-navigation"><a href="modules.html">myFlix Angular Client Documentation - v0.0.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

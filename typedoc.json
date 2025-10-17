@@ -1,0 +1,66 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/app"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/*.e2e-spec.ts"
+  ],
+  "excludePrivate": false,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "excludeInternal": false,
+  "readme": "README.md",
+  "name": "myFlix Angular Client Documentation",
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "Services",
+    "Components",
+    "Dialogs",
+    "*"
+  ],
+  "sort": ["source-order"],
+  "visibilityFilters": {
+    "protected": true,
+    "private": true,
+    "inherited": true,
+    "external": false
+  },
+  "searchInComments": true,
+  "plugin": [],
+  "theme": "default",
+  "lightHighlightTheme": "light-plus",
+  "darkHighlightTheme": "dark-plus",
+  "navigationLinks": {
+    "GitHub": "https://github.com/AHenry95/myFlix-Angular-Client"
+  },
+  "sidebarLinks": {
+    "API Documentation": "https://myflix-ah-72292705dfa8.herokuapp.com/"
+  },
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true,
+    "includeFolders": true
+  },
+  "commentStyle": "jsdoc",
+  "blockTags": [
+    "@param",
+    "@returns",
+    "@throws",
+    "@example",
+    "@see",
+    "@deprecated"
+  ],
+  "modifierTags": [
+    "@public",
+    "@private",
+    "@protected",
+    "@readonly",
+    "@internal"
+  ]
+}
